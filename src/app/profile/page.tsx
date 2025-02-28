@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { ArrowLeft } from "lucide-react";
-
+import Link from "next/link";
 const ProfilePage = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -19,9 +19,9 @@ const ProfilePage = () => {
         <nav className="mt-6 space-y-4">
           {["Home", "Search", "Explore", "Reels", "Messages", "Notifications", "Profile"].map(
             (item, i) => (
-              <a key={i} href="/" className="block p-2 hover:bg-gray-800 rounded">
+              <Link key={i} href="/" className="block p-2 hover:bg-gray-800 rounded">
                 {item}
-              </a>
+              </Link>
             )
           )}
         </nav>

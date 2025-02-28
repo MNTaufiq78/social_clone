@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react"; // Icons for mute/unmute
-
+import Link from "next/link";
 const ReelVideo = () => {
   // Explicitly type the ref as an HTMLVideoElement or null
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -44,13 +44,13 @@ const InstaClone = () => {
       <aside className="w-64 p-4 border-r border-gray-800 hidden md:block">
         <h1 className="text-2xl font-bold">Social_clone</h1>
         <nav className="mt-6 space-y-4">
-          <a href="#" className="block p-2 hover:bg-gray-800 rounded">Home</a>
-          <a href="#" className="block p-2 hover:bg-gray-800 rounded">Search</a>
-          <a href="#" className="block p-2 hover:bg-gray-800 rounded">Explore</a>
-          <a href="#" className="block p-2 hover:bg-gray-800 rounded">Reels</a>
-          <a href="#" className="block p-2 hover:bg-gray-800 rounded">Messages</a>
-          <a href="#" className="block p-2 hover:bg-gray-800 rounded">Notifications</a>
-          <a href="/profile" className="block p-2 hover:bg-gray-800 rounded">Profile</a>
+          <Link href="#" className="block p-2 hover:bg-gray-800 rounded">Home</Link>
+          <Link href="#" className="block p-2 hover:bg-gray-800 rounded">Search</Link>
+          <Link href="#" className="block p-2 hover:bg-gray-800 rounded">Explore</Link>
+          <Link href="#" className="block p-2 hover:bg-gray-800 rounded">Reels</Link>
+          <Link href="#" className="block p-2 hover:bg-gray-800 rounded">Messages</Link>
+          <Link href="#" className="block p-2 hover:bg-gray-800 rounded">Notifications</Link>
+          <Link href="/profile" className="block p-2 hover:bg-gray-800 rounded">Profile</Link>
         </nav>
       </aside>
       
