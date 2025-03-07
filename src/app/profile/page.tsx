@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { getUserProfile, updateProfilePic, signUpUser } from '../utils/auth';
 import { uploadAvatar } from '../utils/storage';
 import { useSession, useSupabaseClient } from '@supabase/auth-helpers-react';
+import Link from 'next/link';
 
 interface Profile {
   id: string;
@@ -120,13 +121,15 @@ export default function ProfilePage() {
     <div className="flex h-screen bg-gray-100">
       {/* Sidebar */}
       <div className="w-1/5 bg-black text-white p-4">
-        <h2 className="text-2xl font-bold mb-6">Social_clone</h2>
-        <nav className="space-y-2">
-          <div className="p-3 hover:bg-gray-700 cursor-pointer rounded-lg">Home</div>
-          <div className="p-3 hover:bg-gray-700 cursor-pointer rounded-lg">Explore</div>
-          <div className="p-3 hover:bg-gray-700 cursor-pointer rounded-lg">Messages</div>
-          <div className="p-3 hover:bg-gray-700 cursor-pointer rounded-lg">Notifications</div>
-          <div className="p-3 bg-gray-700 cursor-pointer rounded-lg">Profile</div>
+      <h1 className="text-2xl font-bold">Social_clone</h1>
+        <nav className="mt-6 space-y-4">
+          <Link href="../page.tsx" className="block p-2 hover:bg-gray-800 rounded">Home</Link>
+          <Link href="#" className="block p-2 hover:bg-gray-800 rounded">Search</Link>
+          <Link href="#" className="block p-2 hover:bg-gray-800 rounded">Explore</Link>
+          <Link href="#" className="block p-2 hover:bg-gray-800 rounded">Reels</Link>
+          <Link href="#" className="block p-2 hover:bg-gray-800 rounded">Messages</Link>
+          <Link href="#" className="block p-2 hover:bg-gray-800 rounded">Notifications</Link>
+          <Link href="/profile" className="block p-2 hover:bg-gray-800 rounded">Profile</Link>
           <div
             className="p-3 hover:bg-gray-700 cursor-pointer rounded-lg"
             onClick={() => setShowPopup(true)}
