@@ -14,6 +14,8 @@ const ReelVideo = () => {
     }
   };
 
+  
+  
   return (
     <div className="relative flex justify-center">
       <video
