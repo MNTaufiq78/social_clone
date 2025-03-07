@@ -2,7 +2,8 @@ import { supabase } from "@/app/lib/supabase";
 
 export const uploadAvatar = async (file: File, userId: string) => {
   const filePath = `${userId}/${Date.now()}-${file.name}`;
-  const { data: _, error } = await supabase.storage
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { data, error } = await supabase.storage
     .from("/uploads")
     .upload(filePath, file);
 
